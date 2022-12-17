@@ -1,0 +1,20 @@
+:root {
+    --app-header-color: #007;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--app-header-color);
+    text-align: center;
+    font-size: 1.3rem;
+}
