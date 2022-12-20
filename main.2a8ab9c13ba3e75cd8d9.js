@@ -56,7 +56,17 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>Weather App</title>\\n</head>\\n\\n<body>\\n    <header>\\n        <div class=\\\"search-container\\\">\\n            <span class=\\\"search-icon\\\"> &#128269 </span> <input type=\\\"search\\\" placeholder=\\\"Enter a location name\\\"\\n                id=\\\"location-collecter\\\">\\n        </div>\\n    </header>\\n\\n    <div class=\\\"body\\\">\\n        <h1>Weather</h1>\\n        <div class=\\\"location\\\">\\n            <div class=\\\"location-name\\\"> </div>\\n            <div class=\\\"location-weather-info\\\">\\n                <div class=\\\"temp\\\"> 37 ℃</div>\\n                <div class=\\\"weather\\\"> Clear </div>\\n            </div>\\n        </div>\\n    </div>\\n    <footer>\\n        <a href=\\\"https://github.com/Essoh21\\\">copyright &copy; Essohanam 2022</a>\\n    </footer>\\n</body>\\n\\n</html>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://weatherapp/./src/index.html?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/html-loader/dist/runtime/getUrl.js */ \"./node_modules/html-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./login.svg */ \"./src/login.svg\"), __webpack_require__.b);\n// Module\nvar ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);\nvar code = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>Weather App</title>\\n    <link rel=\\\"icon\\\" href=\\\"\" + ___HTML_LOADER_REPLACEMENT_0___ + \"\\\" sizes=\\\"120\\\">\\n</head>\\n\\n<body>\\n    <header>\\n        <div class=\\\"search-container\\\">\\n            <span class=\\\"search-icon\\\"> &#128269 </span> <input type=\\\"search\\\" placeholder=\\\"Enter a location name\\\"\\n                id=\\\"location-collecter\\\">\\n        </div>\\n    </header>\\n\\n    <div class=\\\"body\\\">\\n        <h1>Weather</h1>\\n        <div class=\\\"location\\\">\\n            <div class=\\\"location-name\\\"> </div>\\n            <div class=\\\"location-weather-info\\\">\\n                <div class=\\\"temp\\\"> 37 ℃</div>\\n                <div class=\\\"weather\\\"> Clear </div>\\n            </div>\\n        </div>\\n    </div>\\n    <footer>\\n        <a href=\\\"https://github.com/Essoh21\\\">copyright &copy; Essohanam 2022</a>\\n    </footer>\\n</body>\\n\\n</html>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://weatherapp/./src/index.html?");
+
+/***/ }),
+
+/***/ "./node_modules/html-loader/dist/runtime/getUrl.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/html-loader/dist/runtime/getUrl.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = String(url.__esModule ? url.default : url);\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  }\n\n  if (options.maybeNeedQuotes && /[\\t\\n\\f\\r \"'=<>`]/.test(url)) {\n    return \"\\\"\".concat(url, \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://weatherapp/./node_modules/html-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -148,6 +158,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.html */ \"./src/index.html\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ \"./src/data.js\");\n/* harmony import */ var _getGifSrcFromGify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../getGifSrcFromGify */ \"./getGifSrcFromGify.js\");\n\n\n\n\n\nlet locationToSearch = document.querySelector('#location-collecter');\nlet locationName = 'Lomé';\nlet locationNameContainer = document.querySelector('.location-name');\nconst tempContainer = document.querySelector('.temp');\nconst searchIcon = document.querySelector('.search-icon');\nconst weatherContainer = document.querySelector('.weather');\nconst weatherInfoContainer = document.querySelector('.location-weather-info');\nconst cropRequestUrl = 'https://api.giphy.com/v1/gifs/translate?api_key=SsSqGDRjyoH2TXKUZJ98g5EeFuLZecnk&s=';\n\nasync function chargeLocationWeatherInfo(location) {\n    const locationTemp = await getTemperatureOf(location);\n    const locationWeather = await getWeatherOf(location);\n    updateLocationNameVariable();\n    displayLocationName();\n    displayContentIn(`${locationTemp} ℃`, tempContainer);\n    displayContentIn(`${locationWeather}`, weatherContainer);\n    try {\n        setGifAsBackGroundOf('sky' + locationWeather, weatherInfoContainer);\n    } catch (err) {\n        console.error('gif not found');\n    }\n}\nasync function getTemperatureOf(location) {\n    const locationDataObject = await (0,_data__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(location);\n    const locationTemperature = await locationDataObject.main['temp'];\n    return locationTemperature;\n}\n\nasync function getWeatherOf(location) {\n    const locationDataObject = await (0,_data__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(location);\n    const locationWeather = await locationDataObject.weather[0].description;\n    return locationWeather;\n}\n\nfunction displayContentIn(content, target) {\n    target.textContent = `${content}`;\n}\n\nasync function setGifAsBackGroundOf(gifName, container) {\n    const gifSrc = await (0,_getGifSrcFromGify__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(`${gifName}`, cropRequestUrl);\n    setUrlAsBackgroudImgUrlOf(gifSrc, container)\n}\n\nfunction setUrlAsBackgroudImgUrlOf(urlToUse, target) {\n    target.style.backgroundImage = `url(${urlToUse})`;\n}\n\nfunction updateLocationNameVariable() {\n    if (!locationToSearch.value == '') {\n        locationName = locationToSearch.value.toUpperCase();\n    } else {\n        locationName = 'lomé'.toLocaleUpperCase();\n    }\n}\n\nfunction displayLocationName() {\n    locationNameContainer.textContent = locationName;\n}\n\nfunction clearLocationName() {\n    locationNameContainer.textContent = '';\n}\n\nfunction clearInput(inputToclear) {\n    inputToclear.value = '';\n}\n\nsearchIcon.addEventListener('click', () => {\n    updateLocationNameVariable();\n    clearLocationName();\n    chargeLocationWeatherInfo(locationName);\n    displayLocationName();\n});\nlocationToSearch.addEventListener('keypress', (event) => {\n    if (event.key === 'Enter') {\n        updateLocationNameVariable();\n        chargeLocationWeatherInfo(locationName);\n    }\n})\n\nwindow.addEventListener('load', () => {\n    updateLocationNameVariable();\n    chargeLocationWeatherInfo(locationName);\n})\n\n\n//# sourceURL=webpack://weatherapp/./src/index.js?");
 
+/***/ }),
+
+/***/ "./src/login.svg":
+/*!***********************!*\
+  !*** ./src/login.svg ***!
+  \***********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"24bffd2470303e81ccc9.svg\";\n\n//# sourceURL=webpack://weatherapp/./src/login.svg?");
+
 /***/ })
 
 /******/ 	});
@@ -176,6 +196,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -201,6 +224,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -215,6 +250,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
