@@ -9,13 +9,21 @@ let locationNameContainer = document.querySelector('.location-name');
 const tempContainer = document.querySelector('.temp');
 const searchIcon = document.querySelector('.search-icon');
 const weatherContainer = document.querySelector('.weather');
+const weatherInfoContainer = document.querySelector('.location-weather-info');
+const cropRequestUrl = 'https://api.giphy.com/v1/gifs/translate?api_key=SsSqGDRjyoH2TXKUZJ98g5EeFuLZecnk&s=';
 
-async function chargeLoactionWeatherInfo(location) {
+async function chargeLocationWeatherInfo(location) {
     const locationTemp = await getTemperatureOf(location);
     const locationWeather = await getWeatherOf(location);
-    updateLocationName();
+    updateLocationNameVariable();
+    displayLocationName();
     displayContentIn(`${locationTemp} ℃`, tempContainer);
-    displayContentIn(`${locationWeather}`, weatherContainer)
+    displayContentIn(`${locationWeather}`, weatherContainer);
+    try {
+        setGifAsBackGroundOf('sky' + locationWeather, weatherInfoContainer);
+    } catch (err) {
+        console.error('gif not found');
+    }
 }
 async function getTemperatureOf(location) {
     const locationDataObject = await getWeatherDataFromLocation(location);
@@ -33,24 +41,49 @@ function displayContentIn(content, target) {
     target.textContent = `${content}`;
 }
 
-function updateLocationName() {
-    if (!locationToSearch.value === '') {
-        locationNameContainer.textContent = locationToSearch.value.toUpperCase();
+async function setGifAsBackGroundOf(gifName, container) {
+    const gifSrc = await getGifSrcFromGify(`${gifName}`, cropRequestUrl);
+    setUrlAsBackgroudImgUrlOf(gifSrc, container)
+}
+
+function setUrlAsBackgroudImgUrlOf(urlToUse, target) {
+    target.style.backgroundImage = `url(${urlToUse})`;
+}
+
+function updateLocationNameVariable() {
+    if (!locationToSearch.value == '') {
+        locationName = locationToSearch.value.toUpperCase();
     } else {
-        locationNameContainer.textContent = locationName;
+        locationName = 'lomé'.toLocaleUpperCase();
     }
+}
+
+function displayLocationName() {
+    locationNameContainer.textContent = locationName;
+}
+
+function clearLocationName() {
+    locationNameContainer.textContent = '';
 }
 
 function clearInput(inputToclear) {
     inputToclear.value = '';
 }
 
-searchIcon.addEventListener('click', updateLocationName);
+searchIcon.addEventListener('click', () => {
+    updateLocationNameVariable();
+    clearLocationName();
+    chargeLocationWeatherInfo(locationName);
+    displayLocationName();
+});
 locationToSearch.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-        updateLocationName();
-        clearInput(locationToSearch);
+        updateLocationNameVariable();
+        chargeLocationWeatherInfo(locationName);
     }
 })
 
-chargeLoactionWeatherInfo('lomé');
+window.addEventListener('load', () => {
+    updateLocationNameVariable();
+    chargeLocationWeatherInfo(locationName);
+})
