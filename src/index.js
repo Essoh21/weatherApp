@@ -1,6 +1,7 @@
 import html from './index.html';
 import style from './style.css';
 import getWeatherDataFromLocation from './data';
+import getGifSrcFromGify from '../getGifSrcFromGify';
 
 let locationToSearch = document.querySelector('#location-collecter');
 let locationName = 'Lomé';
