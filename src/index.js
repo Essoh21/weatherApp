@@ -7,23 +7,37 @@ let locationName = 'Lomé';
 let locationNameContainer = document.querySelector('.location-name');
 const tempContainer = document.querySelector('.temp');
 const searchIcon = document.querySelector('.search-icon');
-//const resquestedData = getWeatherDataFromLocation('Lomé').then(data => console.log(data.main['temp']));
+const weatherContainer = document.querySelector('.weather');
+
+async function chargeLoactionWeatherInfo(location) {
+    const locationTemp = await getTemperatureOf(location);
+    const locationWeather = await getWeatherOf(location);
+    updateLocationName();
+    displayContentIn(`${locationTemp} ℃`, tempContainer);
+    displayContentIn(`${locationWeather}`, weatherContainer)
+}
 async function getTemperatureOf(location) {
     const locationDataObject = await getWeatherDataFromLocation(location);
-    if (!(locationToSearch.value === '')) {
-        locationName = locationToSearch.value.toUpperCase();
-        locationNameContainer.innerHTML = locationName;
-    } else {
-        locationNameContainer.innerHTML = locationName
-    }
     const locationTemperature = await locationDataObject.main['temp'];
-    tempContainer.innerHTML = `${locationTemperature} C`;
+    return locationTemperature;
 }
 
+async function getWeatherOf(location) {
+    const locationDataObject = await getWeatherDataFromLocation(location);
+    const locationWeather = await locationDataObject.weather[0].description;
+    return locationWeather;
+}
 
-getTemperatureOf('lomé');
+function displayContentIn(content, target) {
+    target.textContent = `${content}`;
+}
+
 function updateLocationName() {
-    locationNameContainer.innerHTML = locationToSearch.value.toUpperCase();
+    if (!locationToSearch.value === '') {
+        locationNameContainer.textContent = locationToSearch.value.toUpperCase();
+    } else {
+        locationNameContainer.textContent = locationName;
+    }
 }
 
 function clearInput(inputToclear) {
@@ -37,3 +51,5 @@ locationToSearch.addEventListener('keypress', (event) => {
         clearInput(locationToSearch);
     }
 })
+
+chargeLoactionWeatherInfo('lomé');
